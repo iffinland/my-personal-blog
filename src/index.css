@@ -1,0 +1,10 @@
+.btn {
+  padding: 8px 20px; border-radius: 8px; border: none; cursor: pointer;
+  font-size: .9rem; font-family: Inter, sans-serif; transition: all .2s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn--primary { background: #3D5A2E; color: #fff; }
+.btn--primary:hover { background: #2A401E; }
+.btn--secondary { background: #E8E4DA; color: #2C2A26; }
+.btn--outline { background: transparent; border: 1px solid #3D5A2E; color: #3D5A2E; }
+.btn--outline:hover { background: #3D5A2E; color: #fff; }

@@ -1,0 +1,35 @@
+:root {
+  --blog-bg: #F5F3EE; --blog-surface: #FAF8F4; --blog-primary: #3D5A2E;
+  --blog-secondary: #8B6F47; --blog-text: #2C2A26; --blog-text-sec: #5C584E;
+  --blog-border: #D6D2C8; --blog-accent: #5A7F3E;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, sans-serif; background: var(--blog-bg); color: var(--blog-text); }
+
+.app-layout { min-height: 100vh; display: flex; flex-direction: column; }
+.app-layout__body { display: flex; flex: 1; max-width: 1200px; width: 100%; margin: 0 auto; }
+.app-layout__content { flex: 1; padding: 24px; min-height: calc(100vh - 64px); }
+
+.app-header { background: var(--blog-surface); border-bottom: 1px solid var(--blog-border); position: sticky; top: 0; z-index: 100; }
+.app-header__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 24px; padding: 0 24px; height: 64px; }
+.app-header__brand { text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 600; color: var(--blog-primary); white-space: nowrap; }
+.app-header__icon { font-size: 1.5rem; }
+.app-header__nav { display: flex; gap: 4px; flex: 1; }
+.app-header__link { text-decoration: none; color: var(--blog-text-sec); padding: 8px 16px; border-radius: 8px; font-size: .9rem; transition: all .2s; }
+.app-header__link:hover { background: var(--blog-border); color: var(--blog-primary); }
+.app-header__actions { display: flex; align-items: center; gap: 16px; }
+.app-header__theme-toggle { display: flex; gap: 4px; }
+.app-header__theme-btn { background: none; border: 1px solid transparent; padding: 4px 8px; border-radius: 6px; cursor: pointer; font-size: 1.1rem; opacity: .5; }
+.app-header__theme-btn--active { opacity: 1; background: var(--blog-border); border-color: var(--blog-primary); }
+.app-header__user { display: flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--blog-text-sec); }
+.app-header__dev-badge { background: var(--blog-accent); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: .7rem; font-weight: 600; }
+
+.app-sidebar { width: 260px; flex-shrink: 0; padding: 24px 16px; border-right: 1px solid var(--blog-border); }
+.app-sidebar__section { margin-bottom: 24px; }
+.app-sidebar__section h3 { font-size: .9rem; color: var(--blog-primary); margin: 0 0 8px; text-transform: uppercase; letter-spacing: 1px; }
+.app-sidebar__section p { font-size: .85rem; color: var(--blog-text-sec); line-height: 1.5; margin: 0 0 8px; }
+.app-sidebar__dev { background: var(--blog-surface); border: 1px solid var(--blog-accent); border-radius: 8px; padding: 16px; }
+.app-sidebar__hint { font-size: .8rem !important; color: var(--blog-text-sec) !important; }
+
+@media (max-width: 768px) { .app-sidebar { display: none; } .app-header__nav { gap: 0; } .app-header__link { padding: 8px 10px; font-size: .8rem; } .app-layout__content { padding: 16px; } }
